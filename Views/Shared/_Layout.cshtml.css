@@ -1,0 +1,156 @@
+﻿/* Header start */
+.navbar {
+    background-color: #3498db;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;    
+}
+
+    .nav-item h6 {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .nav-item h4:hover {
+            color: #363f45;
+        }
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2980b9;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 170%;
+}
+
+.dropdown-item {
+    color: white;
+    padding: 2px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .dropdown-item:hover {
+        color: #363f45;
+    }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Header end */
+
+/* Footer Start */
+
+.vertical-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+    .menu a {
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    max-width: 30px;
+}
+
+p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.logof {
+    font-size: 80%;
+    padding-left: 90px;
+}
+
+.icon {
+    height: 8%;
+}
+
+.ficon {
+    height: 5%;
+}
+
+.copy-right-sec {
+    text-align: center;
+}
+
+    .copy-right-sec a {
+        color: rgb(255, 255, 255);
+    }
+
+/* Footer End */

@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - mayur_education</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/mayur_education.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MAYUR EDUCATION CAMPUS</div>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <h6>Home</h6>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-controller="AboutPage" asp-action="Index">
+                        <h6>About</h6>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <h6>Our Hostel</h6>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="Kumarchatra" asp-action="Index">
+                                <h6>Kumar Chatralay</h6>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="Ashramshala" asp-action="Index">
+                                <h6>Asharam Shala</h6>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="Girlshostel" asp-action="Index">
+                                <h6>Girls Hostel</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <h6>Our School</h6>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="AshramshalaSchool" asp-action="Index">
+                                <h6>Ashram Shala</h6>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="GmdcSchool" asp-action="Index">
+                                <h6>GMDC</h6>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="ScienceShool" asp-action="Index">
+                                <h6>Science School</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <h6>Our College</h6>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="Ba" asp-action="Index">
+                                <h6>Bachelor of Arts</h6>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="Bsc" asp-action="Index">
+                                <h6>Bachelor of Science</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <h6>Achievements</h6>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="StudentResult" asp-action="Index">
+                                <h6>Student Results</h6>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="Gallery" asp-action="Index">
+                                <h6>Gallery</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <h6>Contact Us</h6>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="AdmisonEnq" asp-action="Index">
+                                <h6>Admission Enquiry</h6>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a asp-area="" asp-controller="Contact" asp-action="Index">
+                                <h6>Contact</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <!--   <Footer /> -->
+    <footer class="vertical-footer">
+        <div class="footer-content">
+            <nav class="menu">
+                <a href="./Kumarchatra.html">Kumar Chatralay</a>
+                <a href="./Ashramshala.html">Asharam Shala</a>
+                <a href="./Girlshostel.html">Girls Hostel</a>
+            </nav>
+
+            <nav class="menu">
+                <a href="./AshramshalaSchool.html">Asharam Shala</a>
+                <a href="./GmdcSchool.html">GMDC School</a>
+                <a href="./ScienceShool.html">Science School</a>
+            </nav>
+
+            <nav class="menu">
+                <a href="./Ba.html">BA</a>
+                <a href="./Bsc.html">BSC</a>
+            </nav>
+            <nav class="menu">
+                <a href="./StudentResult.html">Student Results</a>
+                <a href="./Gallery.html">Gallery</a>
+                <a href="./AdmisonEnq.html">Admission Enquiry</a>
+                <a href="./Contact.html">Contact Now</a>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="logof">
+                <h1>MAYUR EDUCATION CAMPUS</h1>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <img src="instagram.png" class="icon" alt="" />
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <img src="facebook.png" class="ficon" alt="" />
+                </a>
+            </div>
+        </div>
+
+        <section id="copy-right">
+            <div class="copy-right-sec">
+                <i class="fa-solid fa-copyright"></i> © 2024 All Rights Reserved <a href="#">
+                    MAYUR
+                    EDUCATION CAMPUS
+                </a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

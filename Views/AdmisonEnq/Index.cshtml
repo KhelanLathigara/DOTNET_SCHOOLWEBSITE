@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+   
+}
+<style>
+    
+    .contact-right {
+        max-width: 600px;        
+        margin-left: 275px;        
+    }
+
+    /* Style for form inputs */
+    form[name="submit-to-google-sheet"] {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+
+        /* Style for individual form input */
+        form[name="submit-to-google-sheet"] input,
+        form[name="submit-to-google-sheet"] textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Style for the button */
+        form[name="submit-to-google-sheet"] button {
+            grid-column: span 3; /* Make the button span 3 columns */
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+    /* Style for the message span */
+    #msg {
+        display: block;
+        margin-top: 10px;
+        color: #333;
+    }
+
+    /* Style for parent details section */
+    form[name="submit-to-google-sheet"] .parent-details {
+        grid-column: span 3; /* Make parent details span 3 columns */
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+        /* Style for parent details inputs */
+        form[name="submit-to-google-sheet"] .parent-details input,
+        form[name="submit-to-google-sheet"] .parent-details textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+</style>
+
+
+    <div class="contact-right">
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Enter Your Name" required>
+            <input type="email" name="Email" placeholder="Enter Your Email" required>
+        <select name="Gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+            <input type="date" name="DOB" placeholder="Date of Birth">
+            <input type="text" name="AdmissionStandard" placeholder="Admission Standard">
+        <input type="number" name="Previouspercentage" placeholder="Previous Percentage">
+            <input type="text" name="ParentFirstName" placeholder="Parent's First Name">
+            <input type="text" name="ParentLastName" placeholder="Parent's Last Name">
+            <input type="email" name="ParentEmail" placeholder="Parent's Email">
+            <input type="tel" name="ParentMobile" placeholder="Parent's Mobile Number">
+            <input type="text" name="ParentEducation" placeholder="Parent's Education">
+            <textarea name="Address" rows="6" placeholder="Address"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+    </div>
+
+<script>
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxl-m0Kdc_rLLIWRL9JLaluoEJDhSgmv8uNl79M_vwNORbAmc2uDZ0dojwXAoBg71wrYQ/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+            .then((response) => {
+                msg.innerHTML = "Message sent successfully";
+                setTimeout(function () {
+                    msg.innerHTML = "";
+                }, 3000);
+                form.reset();
+            })
+            .catch((error) => console.error("Error!", error.message));
+    });
+    </script>
